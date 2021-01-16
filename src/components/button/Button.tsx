@@ -177,11 +177,7 @@ export const Button = (props: IButtonProps) => {
             )}
             {...props}
         >
-            <div
-                className={classNames(styles.Reveal, {
-                    [styles.ActiveReveal]: reveal,
-                })}
-            ></div>
+            <div className={classNames(styles.Reveal)}></div>
             {props.children}
         </button>
     );
