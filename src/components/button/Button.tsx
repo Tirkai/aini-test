@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { createUseStyles } from "react-jss";
 import { IAiniTheme } from "../../IAiniTheme";
 import { AiniContext } from "../provider/AiniProvider";
@@ -154,8 +154,6 @@ export const Button = (props: IButtonProps) => {
         ]);
 
     console.log(aini.theme);
-
-    const [reveal, setReveal] = useState(false);
 
     const getVariant = () => {
         return utilSwitch(
