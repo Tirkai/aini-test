@@ -3,7 +3,7 @@ export interface IThemeColor {
     hover: string;
 }
 
-export interface IAinitoriTheme {
+export interface IAiniTheme {
     colors: {
         default: IThemeColor;
         primary: IThemeColor;

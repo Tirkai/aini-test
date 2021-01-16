@@ -1,19 +1,19 @@
 import Color from "color";
 import React from "react";
 import ReactDOM from "react-dom";
-import { JssProvider, ThemeProvider } from "react-jss";
 import App from "./App";
-import { IAinitoriTheme } from "./IAinitoriTheme";
+import { AiniProvider } from "./components/provider/AiniProvider";
+import { IAiniTheme } from "./IAiniTheme";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 // const lightTheme = {};
-const DEFAULT_COLOR = "#222222";
+const DEFAULT_COLOR = "#555555";
 const PRIMARY_COLOR = "#546de5";
 const DANGER_COLOR = "#c0392b";
 const SUCCESS_COLOR = "#27ae60";
 
-const darkTheme: IAinitoriTheme = {
+const darkTheme: IAiniTheme = {
     colors: {
         default: {
             idle: DEFAULT_COLOR,
@@ -36,11 +36,9 @@ const darkTheme: IAinitoriTheme = {
 
 ReactDOM.render(
     <React.StrictMode>
-        <JssProvider classNamePrefix="Aini">
-            <ThemeProvider theme={darkTheme}>
-                <App />
-            </ThemeProvider>
-        </JssProvider>
+        <AiniProvider theme={darkTheme}>
+            <App />
+        </AiniProvider>
     </React.StrictMode>,
     document.getElementById("root")
 );

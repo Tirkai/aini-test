@@ -20,7 +20,9 @@ function App() {
                 >
                     <Button variant="primary">Action</Button>
 
-                    <Button variant="success">Approve</Button>
+                    <Button variant="success" onClick={() => alert()}>
+                        Approve
+                    </Button>
                     <Button variant="danger">Reject</Button>
                     <Button>Also</Button>
                 </div>
