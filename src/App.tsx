@@ -1,6 +1,7 @@
+import { Button } from "@tirkai/aini";
 import React from "react";
 import "./App.css";
-import { Button } from "./components/button/Button";
+import { GhostButton } from "./components/button/GhostButton";
 import logo from "./logo.svg";
 
 function App() {
@@ -14,17 +15,17 @@ function App() {
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(4, auto)",
+                        gridTemplateColumns: "repeat(5, auto)",
                         gridGap: "8px",
                     }}
                 >
                     <Button variant="primary">Action</Button>
-
-                    <Button variant="success" onClick={() => alert()}>
-                        Approve
-                    </Button>
+                    <Button variant="success">Aprove</Button>
                     <Button variant="danger">Reject</Button>
                     <Button>Also</Button>
+                    <GhostButton />
+
+                    <GhostButton />
                 </div>
             </header>
         </div>

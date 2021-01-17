@@ -1,17 +1,17 @@
+import { AiniProvider, defaultDarkTheme, IAiniTheme } from "@tirkai/aini";
 import Color from "color";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { AiniProvider } from "./components/provider/AiniProvider";
-import { IAiniTheme } from "./IAiniTheme";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 // const lightTheme = {};
-const DEFAULT_COLOR = "#555555";
+const DEFAULT_COLOR = "#666666";
 const PRIMARY_COLOR = "#546de5";
 const DANGER_COLOR = "#c0392b";
 const SUCCESS_COLOR = "#27ae60";
+const DISABLE_COLOR = "#555";
 
 const darkTheme: IAiniTheme = {
     colors: {
@@ -31,12 +31,16 @@ const darkTheme: IAiniTheme = {
             idle: SUCCESS_COLOR,
             hover: Color(SUCCESS_COLOR).darken(0.2).toString(),
         },
+        ghost: {
+            idle: DISABLE_COLOR,
+            pulse: DEFAULT_COLOR,
+        },
     },
 };
 
 ReactDOM.render(
     <React.StrictMode>
-        <AiniProvider theme={darkTheme}>
+        <AiniProvider theme={defaultDarkTheme}>
             <App />
         </AiniProvider>
     </React.StrictMode>,
